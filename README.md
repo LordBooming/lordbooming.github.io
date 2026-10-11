@@ -445,6 +445,12 @@ A interface web &eacute; est&aacute;tica e compat&iacute;vel com GitHub Pages. A
 
 ---
 
-## 13. Privacidade e segurança da interface web
+## 13. Privacidade, segurança e termos da interface web
 
-A interface web &eacute; est&aacute;tica e compat&iacute;vel com GitHub Pages. A p&aacute;gina restringe scripts e conex&otilde;es &agrave; pr&oacute;pria origem. N&atilde;o h&aacute; contas, sincroniza&ccedil;&atilde;o em nuvem ou processamento de pagamentos. Contribui&ccedil;&otilde;es opcionais por Pix s&atilde;o transfer&ecirc;ncias feitas no banco, fora do aplicativo. Mundos e prefer&ecirc;ncias ficam no armazenamento local do navegador.
+O WorldForge é estático e compatível com GitHub Pages. Não há conta, backend próprio, nuvem, analytics, publicidade, IA conectada ou processamento de pagamentos. Mundos, anotações, preferências e aceite ficam localmente; a Oficina de ideias também funciona localmente. Backups JSON são legíveis e devem ser protegidos.
+
+Cookie essencial lembra a escolha por até 180 dias; se bloqueado, a preferência pode ficar localmente. Service worker guarda arquivos em cache. Não há cookies opcionais. GitHub Pages pode registrar IPs por segurança; veja a [documentação](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages) e a [Declaração de Privacidade](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).
+
+Termos, privacidade, cookies e segurança estão nas Configurações. Contato: [GitHub Issues](https://github.com/Vini632/Vini632.github.io/issues); issues podem ser públicas, não envie dados confidenciais. Consulte [LGPD](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm) e [guia da ANPD](https://www.gov.br/anpd/pt-br/centrais-de-conteudo/materiais-educativos-e-publicacoes/guia_orientativo_cookies_e_protecao_de_dados_pessoais).
+
+Pix é voluntário e externo, sem processamento ou registro pelo app. Se novos recursos mudarem o tratamento de dados, revise estes avisos antes de ativá-los.
