@@ -10,7 +10,7 @@
     <title>WorldForge RPG — seu mundo, em construção</title>
     <link rel="icon" href="./assets/icon.svg" type="image/svg+xml">
     <link rel="manifest" href="./manifest.webmanifest">
-    <link rel="stylesheet" href="./styles.css?v=3">
+    <link rel="stylesheet" href="./styles.css?v=5">
     <link rel="stylesheet" href="./animations.css">
     <link rel="stylesheet" href="./theme-black.css?v=12">
   </head>
@@ -44,12 +44,10 @@
         </nav>
 
         <div class="sidebar-bottom">
-          <button class="upgrade-card" type="button" data-coming-soon>
-            <span class="upgrade-orbit">✳</span><span><strong>Feito para crescer</strong><small>Novidades a caminho</small></span><span class="arrow-small">↗</span>
+          <button class="upgrade-card" type="button" data-view="configuracoes" data-open-settings="support">
+            <span class="upgrade-orbit">✳</span><span><strong>Doa&ccedil;&otilde;es ao projeto</strong><small>Apoio opcional via Pix</small></span><span class="arrow-small">↗</span>
           </button>
-          <button class="profile-button" type="button" data-coming-soon>
-            <span class="profile-avatar">W</span><span class="profile-copy"><strong>Explorador</strong><small>Conta local</small></span><span class="profile-dots">•••</span>
-          </button>
+          <div class="profile-button" aria-label="Perfil local, sem conta online"><span class="profile-avatar">W</span><span class="profile-copy"><strong>Explorador</strong><small>Conta local</small></span><span class="profile-dots" aria-hidden="true">LOCAL</span></div>
         </div>
       </aside>
 
@@ -59,7 +57,7 @@
           <div class="topbar-actions">
             <label class="search-box"><span data-icon="search"></span><input id="global-search" type="search" placeholder="Buscar no mundo..." aria-label="Buscar no mundo"><kbd>⌘ K</kbd></label>
             <span class="topbar-divider"></span>
-            <button class="icon-button notification-button" aria-label="Notificações" data-coming-soon><span data-icon="bell"></span><i></i></button>
+            <button class="icon-button notification-button" aria-label="Abrir preferencias de notificacoes" data-view="configuracoes" data-open-settings="notifications"><span data-icon="bell"></span></button>
             <button class="button button-primary button-small" id="new-world-top"><span data-icon="plus"></span>Novo mundo</button>
           </div>
         </header>
@@ -85,7 +83,7 @@
         <h2 id="terms-consent-title">Voc&ecirc; aceita os Termos de Uso?</h2>
         <p class="modal-intro">Antes de entrar, leia os termos e o aviso de privacidade. O WorldForge s&oacute; ser&aacute; liberado depois da sua confirma&ccedil;&atilde;o.</p>
         <div class="consent-documents">
-          <details><summary>Termos de Uso (texto completo)</summary><div class="consent-document-copy"><p>O WorldForge RPG &eacute; uma ferramenta para criar e organizar mundos fict&iacute;cios. Voc&ecirc; pode usar os resultados em projetos pessoais ou outros projetos, respeitando a lei e os direitos de terceiros.</p><p>Voc&ecirc; &eacute; respons&aacute;vel pelo conte&uacute;do que inserir ou importar e por manter backups do que deseja preservar. N&atilde;o use o app para armazenar conte&uacute;do ilegal, dados pessoais de terceiros sem autoriza&ccedil;&atilde;o ou material que viole direitos de terceiros.</p><p>O aplicativo &eacute; oferecido como est&aacute;, pode mudar ou ficar indispon&iacute;vel e n&atilde;o oferece conta, recupera&ccedil;&atilde;o de dados ou backup em servidores do WorldForge. Exporte seus mundos regularmente.</p><p>Contas, sincroniza&ccedil;&atilde;o em nuvem, IA, cr&eacute;ditos, assinaturas e pagamentos n&atilde;o est&atilde;o ativos. Se forem lan&ccedil;ados, informa&ccedil;&otilde;es e termos espec&iacute;ficos ser&atilde;o apresentados antes da ativa&ccedil;&atilde;o. Os termos vigentes ficam dispon&iacute;veis nas Configura&ccedil;&otilde;es.</p></div></details>
+          <details><summary>Termos de Uso (texto completo)</summary><div class="consent-document-copy"><p>O WorldForge RPG &eacute; uma ferramenta para criar e organizar mundos fict&iacute;cios. Voc&ecirc; pode usar os resultados em projetos pessoais ou outros projetos, respeitando a lei e os direitos de terceiros.</p><p>Voc&ecirc; &eacute; respons&aacute;vel pelo conte&uacute;do que inserir ou importar e por manter backups do que deseja preservar. N&atilde;o use o app para armazenar conte&uacute;do ilegal, dados pessoais de terceiros sem autoriza&ccedil;&atilde;o ou material que viole direitos de terceiros.</p><p>O aplicativo &eacute; oferecido como est&aacute;, pode mudar ou ficar indispon&iacute;vel e n&atilde;o oferece conta, recupera&ccedil;&atilde;o de dados ou backup em servidores do WorldForge. Exporte seus mundos regularmente.</p><p>A oficina de ideias &eacute; local e n&atilde;o usa um modelo de IA. Contas, IA conectada, cr&eacute;ditos pagos e assinaturas n&atilde;o est&atilde;o ativos. Doa&ccedil;&otilde;es via Pix s&atilde;o opcionais, feitas fora do app e n&atilde;o s&atilde;o processadas pelo WorldForge. Os termos vigentes ficam dispon&iacute;veis nas Configura&ccedil;&otilde;es.</p></div></details>
           <details><summary>Aviso de Privacidade (texto completo)</summary><div class="consent-document-copy"><p>Mundos, anota&ccedil;&otilde;es, tema e outras prefer&ecirc;ncias s&atilde;o guardados no armazenamento local do navegador e n&atilde;o s&atilde;o enviados a um servidor do WorldForge. N&atilde;o usamos analytics ou publicidade. O app usa um cookie pr&oacute;prio para lembrar a escolha deste aviso por 180 dias; cookies opcionais de analytics e publicidade n&atilde;o est&atilde;o ativos.</p><p>Quando hospedado no GitHub Pages, o GitHub registra e armazena o IP dos visitantes para fins de seguran&ccedil;a. Veja a <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages" target="_blank" rel="noopener noreferrer">documenta&ccedil;&atilde;o do GitHub Pages</a> e a <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">pol&iacute;tica de privacidade do GitHub</a>.</p><p>Voc&ecirc; pode exportar e apagar os mundos nas Configura&ccedil;&otilde;es. O aceite destes termos fica neste navegador, pode ser revogado e n&atilde;o identifica a pessoa que aceitou. Sons e notifica&ccedil;&otilde;es dependem das permiss&otilde;es do navegador.</p><p>Para d&uacute;vidas, use o canal de contato indicado junto &agrave; distribui&ccedil;&atilde;o do projeto.</p></div></details>
           <a class="consent-policy-link" href="https://www.gov.br/anpd/pt-br/centrais-de-conteudo/materiais-educativos-e-publicacoes/guia_orientativo_cookies_e_protecao_de_dados_pessoais" target="_blank" rel="noopener noreferrer">Guia de cookies e privacidade da ANPD <span aria-hidden="true">&#8599;</span></a>
         </div>
@@ -163,6 +161,6 @@
     <input id="import-file" type="file" accept=".json,application/json" hidden>
     <input id="library-import-file" type="file" accept=".json,application/json" hidden>
     <div class="toast-region" id="toast-region" aria-live="polite"></div>
-    <script src="./app.js?v=14" defer></script>
+    <script src="./app.js?v=15" defer></script>
   </body>
 </html>
