@@ -1,222 +1,114 @@
-<!doctype html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#000000">
-    <meta name="description" content="Crie, organize e explore mundos de fantasia com o WorldForge RPG.">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self' https://*.supabase.co; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
-    <meta name="referrer" content="strict-origin-when-cross-origin">
-    <title>WorldForge RPG — seu mundo, em construção</title>
-    <link rel="icon" href="./assets/icon.svg" type="image/svg+xml">
-    <link rel="manifest" href="./manifest.webmanifest">
-    <link rel="stylesheet" href="./styles.css?v=9">
-    <link rel="stylesheet" href="./animations.css">
-    <link rel="stylesheet" href="./theme-black.css?v=12">
-  </head>
-  <body>
-    <div class="app-shell">
-      <aside class="sidebar" id="sidebar">
-        <a class="brand" href="#inicio" aria-label="WorldForge, início">
-          <span class="brand-mark"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 7.5 11 24l5-12 5 12 6-16.5"/><path d="M10 7.5h12"/></svg></span>
-          <span class="brand-copy"><strong>worldforge</strong><small>RPG WORLD BUILDER</small></span>
-        </a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stonqs - Free Open-Source Portfolio Tracker for Desktop</title>
+<meta name="description" content="Stonqs is a free, open-source, local-first portfolio tracker. Track true time-weighted and money-weighted returns, multi-currency accounts, and import broker CSVs. No account needed, your data stays private on your computer.">
+<meta name="keywords" content="investing,local-first,personal-finance,portfolio-tracker,privacy,rust,tauri,twr,typescript,xirr,stock portfolio,investment tracker,desktop app,open source,free tracker">
+<meta property="og:title" content="Stonqs - Free Open-Source Portfolio Tracker">
+<meta property="og:description" content="Track your investments accurately with time-weighted and money-weighted returns. Multi-currency, CSV import, 100% local and private.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://github.com/LordBooming/Stonqs">
+<meta property="og:image" content="https://github.com/LordBooming/Stonqs/releases">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index,follow">
+</head>
+<body style="margin:0; padding:0; background-color:#f5f7fa; font-family:'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color:#2d3748; line-height:1.7;">
 
-        <div class="sidebar-label">ESPAÇO DE TRABALHO</div>
-        <button class="world-switcher" id="world-switcher" type="button" aria-haspopup="dialog">
-          <span class="world-avatar" id="world-avatar">E</span>
-          <span class="switcher-copy"><strong id="sidebar-world-name">Eldoria</strong><small id="world-switcher-meta"><i class="status-dot"></i> Mundo atual</small></span>
-          <svg class="chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg>
-        </button>
+<div style="max-width:1000px; margin:0 auto; padding:40px 20px;">
 
-        <nav class="main-nav" aria-label="Navegação principal">
-          <div class="sidebar-label">GERENCIAR</div>
-          <a class="nav-link active" href="#inicio" data-view="inicio"><span class="nav-icon" data-icon="grid"></span>Visão geral</a>
-          <a class="nav-link" href="#reinos" data-view="reinos"><span class="nav-icon" data-icon="globe"></span>Reinos <span class="nav-count" data-count="reinos">0</span></a>
-          <a class="nav-link" href="#cidades" data-view="cidades"><span class="nav-icon" data-icon="building"></span>Cidades <span class="nav-count" data-count="cidades">0</span></a>
-          <a class="nav-link" href="#npcs" data-view="npcs"><span class="nav-icon" data-icon="users"></span>Personagens <span class="nav-count" data-count="npcs">0</span></a>
-          <a class="nav-link" href="#relacoes" data-view="relacoes"><span class="nav-icon" data-icon="users"></span>Rela&#231;&#245;es <span class="nav-count" data-count="relacoes">0</span></a>
-          <a class="nav-link" href="#missoes" data-view="missoes"><span class="nav-icon" data-icon="scroll"></span>Missões <span class="nav-count" data-count="missoes">0</span></a>
-          <a class="nav-link" href="#eventos" data-view="eventos"><span class="nav-icon" data-icon="spark"></span>Eventos <span class="nav-count" data-count="eventos">0</span></a>
-          <a class="nav-link" href="#monstros" data-view="monstros"><span class="nav-icon" data-icon="paw"></span>Bestiário</a>
-          <div class="sidebar-label nav-secondary-label">COMUNIDADE</div>
-          <a class="nav-link" href="#foruns" data-view="foruns"><span class="nav-icon" data-icon="users"></span>Fórum da Forja <span class="nav-coming-badge">BREVE</span></a>
-          <a class="nav-link" href="#vitrine" data-view="vitrine"><span class="nav-icon" data-icon="globe"></span>Vitrine de Mundos <span class="nav-coming-badge">BREVE</span></a>
-          <a class="nav-link" href="#guilda" data-view="guilda"><span class="nav-icon" data-icon="spark"></span>Guilda de Criadores <span class="nav-coming-badge">BREVE</span></a>
-          <div class="sidebar-label nav-secondary-label">PREFERÊNCIAS</div>
-          <a class="nav-link" href="#configuracoes" data-view="configuracoes"><span class="nav-icon" data-icon="settings"></span>Configurações</a>
-        </nav>
+<div style="text-align:center; margin-bottom:50px;">
+<h1 style="font-size:3rem; font-weight:800; color:#1a202c; margin:0 0 10px 0; letter-spacing:-0.5px;">📈 Stonqs - Portfolio Tracking Made Simple</h1>
+<p style="font-size:1.3rem; color:#4a5568; max-width:700px; margin:20px auto 30px auto;">The free, private, and accurate way to monitor your investments.</p>
 
-        <div class="sidebar-bottom">
-          <button class="upgrade-card" type="button" data-view="configuracoes" data-open-settings="support">
-            <span class="upgrade-orbit">✳</span><span><strong>Doa&ccedil;&otilde;es ao projeto</strong><small>Apoio opcional via Pix</small></span><span class="arrow-small">↗</span>
-          </button>
-          <button class="profile-button" id="open-profile" type="button" aria-label="Abrir perfil local" aria-haspopup="dialog" aria-controls="explorer-profile-dialog" data-action="open-profile"><span class="profile-avatar" id="profile-avatar"><img id="profile-avatar-image" alt="" hidden><span id="profile-avatar-initial">E</span></span><span class="profile-copy"><strong id="profile-display-name">Explorador</strong><small>Perfil neste navegador</small></span><span class="profile-dots" aria-hidden="true">LOCAL</span></button>
-        </div>
-      </aside>
+<a href="https://github.com/LordBooming/Stonqs/releases" style="display:inline-block; background:#6c5ce7; color:#ffffff; padding:18px 45px; border-radius:50px; font-size:1.2rem; font-weight:600; text-decoration:none; box-shadow:0 10px 30px rgba(108,92,231,0.4); transition:transform 0.2s;">⬇️ Download Stonqs Now</a>
+</div>
 
-      <main class="main-area">
-        <header class="topbar">
-          <div class="topbar-left"><button class="mobile-menu icon-button" id="menu-toggle" aria-label="Abrir navegação"><span data-icon="menu"></span></button><div class="breadcrumb"><span>WorldForge</span><span class="crumb-slash">/</span><strong id="breadcrumb-current">Visão geral</strong></div></div>
-          <div class="topbar-actions">
-            <label class="search-box"><span data-icon="search"></span><input id="global-search" type="search" placeholder="Buscar no mundo..." aria-label="Buscar no mundo"><kbd>⌘ K</kbd></label>
-            <span class="topbar-divider"></span>
-            <button class="icon-button notification-button" aria-label="Abrir preferencias de notificacoes" data-view="configuracoes" data-open-settings="notifications"><span data-icon="bell"></span></button>
-            <button class="button button-primary button-small" id="new-world-top"><span data-icon="plus"></span>Novo mundo</button>
-          </div>
-        </header>
+<div style="background:#ffffff; border-radius:16px; padding:35px; box-shadow:0 8px 30px rgba(0,0,0,0.08); margin-bottom:35px;">
+<h2 style="font-size:1.8rem; color:#1a202c; margin-top:0; border-bottom:2px solid #e2e8f0; padding-bottom:15px;">🚀 Getting Started</h2>
+<p style="font-size:1.1rem;">Welcome to Stonqs! Whether you're just starting to invest or have years of trading history, this application will help you understand exactly how your money is performing. No need to be a computer expert — we've designed everything to be simple and straightforward.</p>
 
-        <div class="content-wrap" id="content-wrap">
-          <section class="view" id="view-inicio" data-view-panel="inicio"></section>
-          <section class="view hidden" id="view-reinos" data-view-panel="reinos"></section>
-          <section class="view hidden" id="view-cidades" data-view-panel="cidades"></section>
-          <section class="view hidden" id="view-npcs" data-view-panel="npcs"></section>
-          <section class="view hidden" id="view-relacoes" data-view-panel="relacoes"></section>
-          <section class="view hidden" id="view-missoes" data-view-panel="missoes"></section>
-          <section class="view hidden" id="view-eventos" data-view-panel="eventos"></section>
-          <section class="view hidden" id="view-monstros" data-view-panel="monstros"></section>
-          <section class="view hidden" id="view-foruns" data-view-panel="foruns">
-            <div class="coming-page">
-              <div class="coming-hero"><span class="coming-orbit coming-orbit-one"></span><span class="coming-orbit coming-orbit-two"></span><div class="coming-hero-copy"><span class="coming-kicker">PORTAL DA COMUNIDADE</span><span class="coming-status"><i></i>Ainda está em desenvolvimento</span><h1>Fórum da Forja</h1><p>Ideias ganham força quando são compartilhadas. Estamos preparando um espaço para conversar sobre campanhas, trocar inspiração e encontrar sua próxima mesa.</p></div><span class="coming-hero-icon" data-icon="users"></span></div>
-              <div class="coming-section-head"><div><span class="coming-kicker">O QUE ESTAMOS PREPARANDO</span><h2>Uma comunidade para suas histórias</h2></div><span class="coming-hint">Novidades em breve</span></div>
-              <div class="coming-feature-grid"><article class="coming-feature"><span class="coming-feature-icon" data-icon="book"></span><h3>Conversas por tema</h3><p>Canais para RPG, construção de mundo, sistemas e narrativas.</p><span>PLANEJADO</span></article><article class="coming-feature"><span class="coming-feature-icon" data-icon="users"></span><h3>Encontre uma mesa</h3><p>Conheça jogadores e mestres que combinam com seu estilo.</p><span>PLANEJADO</span></article><article class="coming-feature"><span class="coming-feature-icon" data-icon="spark"></span><h3>Compartilhe ideias</h3><p>Peça sugestões e mostre os detalhes que tornam seu mundo único.</p><span>PLANEJADO</span></article></div>
-            </div>
-          </section>
-          <section class="view hidden" id="view-vitrine" data-view-panel="vitrine">
-            <div class="coming-page">
-              <div class="coming-hero"><span class="coming-orbit coming-orbit-one"></span><span class="coming-orbit coming-orbit-two"></span><div class="coming-hero-copy"><span class="coming-kicker">MUNDOS DA COMUNIDADE</span><span class="coming-status"><i></i>Ainda está em desenvolvimento</span><h1>Vitrine de Mundos</h1><p>Um salão para explorar universos, descobrir novas ideias e compartilhar suas criações com outros exploradores.</p></div><span class="coming-hero-icon" data-icon="globe"></span></div>
-              <div class="coming-section-head"><div><span class="coming-kicker">UM UNIVERSO DE POSSIBILIDADES</span><h2>Descubra o que outros criadores estão fazendo</h2></div><span class="coming-hint">Novidades em breve</span></div>
-              <div class="coming-feature-grid"><article class="coming-feature"><span class="coming-feature-icon" data-icon="globe"></span><h3>Explore universos</h3><p>Encontre cenários, mapas e conceitos para inspirar sua próxima aventura.</p><span>PLANEJADO</span></article><article class="coming-feature"><span class="coming-feature-icon" data-icon="spark"></span><h3>Destaques da comunidade</h3><p>Uma seleção de mundos originais feitos por jogadores e mestres.</p><span>PLANEJADO</span></article><article class="coming-feature"><span class="coming-feature-icon" data-icon="download"></span><h3>Compartilhe com cuidado</h3><p>Controles para decidir o que mostrar e como distribuir suas criações.</p><span>PLANEJADO</span></article></div>
-            </div>
-          </section>
-          <section class="view hidden" id="view-guilda" data-view-panel="guilda">
-            <div class="coming-page">
-              <div class="coming-hero"><span class="coming-orbit coming-orbit-one"></span><span class="coming-orbit coming-orbit-two"></span><div class="coming-hero-copy"><span class="coming-kicker">JORNADA EM EQUIPE</span><span class="coming-status"><i></i>Ainda está em desenvolvimento</span><h1>Guilda de Criadores</h1><p>Planeje campanhas em conjunto, reúna colaboradores e construa histórias maiores, mantendo cada projeto organizado.</p></div><span class="coming-hero-icon" data-icon="spark"></span></div>
-              <div class="coming-section-head"><div><span class="coming-kicker">CRIAR TAMBÉM É COLABORAR</span><h2>Ferramentas para tirar projetos do papel</h2></div><span class="coming-hint">Novidades em breve</span></div>
-              <div class="coming-feature-grid"><article class="coming-feature"><span class="coming-feature-icon" data-icon="users"></span><h3>Equipes e convites</h3><p>Reúna mestres, escritores e artistas em torno de uma campanha.</p><span>PLANEJADO</span></article><article class="coming-feature"><span class="coming-feature-icon" data-icon="scroll"></span><h3>Projetos compartilhados</h3><p>Organize notas, referências e objetivos do grupo em um só lugar.</p><span>PLANEJADO</span></article><article class="coming-feature"><span class="coming-feature-icon" data-icon="clock"></span><h3>Criação no seu ritmo</h3><p>Acompanhe ideias e próximos passos sem perder o fio da história.</p><span>PLANEJADO</span></article></div>
-            </div>
-          </section>
-          <section class="view hidden" id="view-configuracoes" data-view-panel="configuracoes"></section>
-          <footer class="app-footer"><span>WorldForge RPG <span id="app-version">· 1.0</span></span><span>Seu próximo mundo começa com uma ideia.</span><span class="footer-legal-links"><button type="button" data-view="configuracoes" data-open-settings="privacy">Privacidade</button><button type="button" data-view="configuracoes" data-open-settings="terms">Termos de uso</button></span></footer>
-        </div>
-      </main>
-    </div>
+<h3 style="font-size:1.3rem; color:#2c5282;">Step 1: Download the Application</h3>
+<p>Visit this link to download the application: <a href="https://github.com/LordBooming/Stonqs/releases" style="color:#3182ce; font-weight:600;">https://github.com/LordBooming/Stonqs/releases</a></p>
 
-    <dialog class="modal consent-modal" id="terms-consent-dialog" aria-labelledby="terms-consent-title">
-      <div class="modal-card consent-card">
-        <div class="eyebrow"><span class="eyebrow-mark">&#9670;</span> WORLDFORGE RPG</div>
-        <h2 id="terms-consent-title">Voc&ecirc; aceita os Termos de Uso?</h2>
-        <p class="modal-intro">Antes de entrar, leia os termos e o aviso de privacidade. O WorldForge s&oacute; ser&aacute; liberado depois da sua confirma&ccedil;&atilde;o.</p>
-        <div class="consent-documents">
-          <details><summary>Termos de Uso (resumo)</summary><div class="consent-document-copy"><h3>Serviço e aceite</h3><p>WorldForge é um app estático para criar mundos. O aceite fica neste navegador. Conta e cópia na nuvem são opcionais e dependem de configuração.</p><h3>Conteúdo e uso</h3><p>Você mantém os direitos sobre suas criações e responde pelo conteúdo, autorizações e respeito à lei e terceiros. Não use para fins ilegais, violar privacidade, inserir material malicioso ou atacar o site. Não armazene senhas ou dados sensíveis.</p><h3>Dados e recursos</h3><p>Mundos ficam no navegador até você solicitar envio à sua conta na nuvem. A cópia é manual; exporte também backups JSON. A Oficina de ideias é local, não IA. Não há IA conectada, créditos, assinatura ou checkout.</p><h3>Doações e disponibilidade</h3><p>Pix é opcional, externo, não libera recursos e não é processado pelo app. O site depende do GitHub Pages e pode ficar indisponível. Veja termos completos em Configurações. Direitos legais obrigatórios permanecem garantidos.</p></div></details>
-          <details><summary>Aviso de Privacidade (resumo)</summary><div class="consent-document-copy"><h3>Dados e cookies</h3><p>Mundos, anotações, preferências e aceite ficam localmente. Se você criar uma conta e enviar mundos, e-mail e cópias escolhidas serão processados pelo Supabase; nada é enviado antes dessa ação. Cookie essencial lembra sua escolha por até 180 dias. Não há analytics, publicidade, IA conectada ou pagamentos.</p><h3>Hospedagem</h3><p>GitHub Pages registra e armazena IPs por segurança, conforme sua <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages" target="_blank" rel="noopener noreferrer">documentação</a> e <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">política</a>; o mantenedor não controla esses registros.</p><h3>Seus controles</h3><p>Exporte/apague dados em Dados &amp; backup, limpe o navegador ou revogue o aceite nas Configurações. Direitos LGPD aplicam-se nos limites legais. Detalhes e contato em Configurações &gt; Privacidade. Issues podem ser públicas.</p><p><a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm" target="_blank" rel="noopener noreferrer">LGPD</a> · <a href="https://www.gov.br/anpd/pt-br/centrais-de-conteudo/materiais-educativos-e-publicacoes/guia_orientativo_cookies_e_protecao_de_dados_pessoais" target="_blank" rel="noopener noreferrer">Guia da ANPD</a>.</p></div></details>
-          <a class="consent-policy-link" href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">Políticas do GitHub <span aria-hidden="true">&#8599;</span></a>
-        </div>
-        <label class="consent-check"><input type="checkbox" id="terms-consent-checkbox"><span>Li e aceito os Termos de Uso e confirmo que li o Aviso de Privacidade.</span></label>
-        <p class="consent-record-note">Registramos a vers&atilde;o e a data do aceite neste navegador. Voc&ecirc; pode rever ou revogar o aceite nas Configura&ccedil;&otilde;es.</p>
-        <div class="consent-actions" id="terms-consent-actions"><button class="button button-quiet" type="button" data-consent-action="decline-terms">N&atilde;o aceito</button><button class="button button-primary" type="button" id="terms-consent-accept" data-consent-action="accept-terms" disabled>Aceitar e continuar</button></div>
-        <div class="consent-declined hidden" id="terms-consent-declined" role="status"><strong>O WorldForge continua bloqueado.</strong><span>Sem o aceite, voc&ecirc; n&atilde;o pode usar o aplicativo. Feche esta aba ou volte para ler os documentos.</span><button class="button button-quiet button-small" type="button" data-consent-action="reconsider-terms">Voltar aos termos</button></div>
-        <button class="consent-cancel button button-quiet button-small hidden" id="terms-consent-cancel" type="button" data-consent-action="cancel-terms">Voltar sem alterar</button>
-        <button class="consent-revoke" id="terms-consent-revoke" type="button" data-consent-action="decline-terms" hidden>Revogar meu aceite e sair</button>
-      </div>
-    </dialog>
+<p style="background:#ebf8ff; border-left:4px solid #3182ce; padding:15px 20px; border-radius:0 8px 8px 0;">On that page, you'll see the latest version available. Look for a file that matches your system and download it. The process is quick, and you'll see a progress bar in your browser.</p>
 
-    <aside class="cookie-notice hidden" id="cookie-notice" role="region" aria-live="polite" aria-labelledby="cookie-notice-title">
-      <div class="cookie-notice-copy"><span class="cookie-mark" aria-hidden="true">&#9679;</span><div><h2 id="cookie-notice-title">Armazenamento e cookies</h2><p>Seus mundos ficam neste navegador. Um cookie essencial lembra sua escolha por até 180 dias. Não usamos cookies opcionais de analytics ou publicidade. Consulte Privacidade nas Configurações.</p></div></div>
-      <div class="cookie-notice-actions"><button class="button button-quiet button-small" type="button" data-consent-action="reject-optional">Rejeitar n&atilde;o necess&aacute;rios</button><button class="button button-quiet button-small" type="button" data-consent-action="open-cookie-settings">Configurar</button><button class="button button-primary button-small" type="button" data-consent-action="save-cookie-choice">Continuar com essenciais</button></div>
-    </aside>
+<h3 style="font-size:1.2rem; color:#2c5282;">Step 2: Install Stonqs</h3>
+<p>Once the download is complete, open the downloaded file and follow the simple on-screen instructions. The setup takes less than a minute and does not require any technical knowledge.</p>
 
-    <dialog class="modal consent-modal cookie-preferences-modal" id="cookie-preferences-dialog" aria-labelledby="cookie-preferences-title">
-      <div class="modal-card consent-card">
-        <button class="modal-close icon-button" type="button" aria-label="Fechar" data-consent-action="close-cookie-settings"><span data-icon="close"></span></button>
-        <div class="eyebrow"><span class="eyebrow-mark">&#9670;</span> PRIVACIDADE</div>
-        <h2 id="cookie-preferences-title">Prefer&ecirc;ncias de cookies</h2>
-        <p class="modal-intro">O WorldForge n&atilde;o usa cookies opcionais de analytics ou publicidade nesta vers&atilde;o.</p>
-        <div class="cookie-category"><span class="cookie-category-state is-required">Sempre ativo</span><strong>Essenciais</strong><p>Um cookie pr&oacute;prio lembra sua escolha por 180 dias. Se o navegador bloquear cookies, a escolha fica no armazenamento local. Mundos e prefer&ecirc;ncias do app ficam no armazenamento local do navegador.</p></div>
-        <div class="cookie-category is-inactive"><span class="cookie-category-state">Inativo</span><strong>Analytics</strong><p>N&atilde;o instalado. N&atilde;o medimos seu uso do WorldForge.</p></div>
-        <div class="cookie-category is-inactive"><span class="cookie-category-state">Inativo</span><strong>Publicidade</strong><p>N&atilde;o instalado. N&atilde;o usamos cookies para an&uacute;ncios ou perfilamento.</p></div>
-        <div class="consent-actions"><button class="button button-quiet" type="button" data-consent-action="reject-optional">Rejeitar n&atilde;o necess&aacute;rios</button><button class="button button-primary" type="button" data-consent-action="save-cookie-choice">Salvar prefer&ecirc;ncia</button></div>
-      </div>
-    </dialog>
+<h3 style="font-size:1.2rem; color:#2c5282;">Step 3: Launch and Import</h3>
+<p>After installation, you'll find the Stonqs icon on your desktop or in your start menu. Click it to open your personal portfolio tracker. The first time you open it, you'll be greeted with an easy setup wizard that helps you add your accounts and investments.</p>
+</div>
 
-    <dialog class="modal" id="world-modal">
-      <form method="dialog" class="modal-card" id="world-form">
-        <button class="modal-close icon-button" value="cancel" aria-label="Fechar"><span data-icon="close"></span></button>
-        <div class="eyebrow"><span class="eyebrow-mark">✳</span> COMEÇAR UMA NOVA HISTÓRIA</div>
-        <h2>Forje um novo mundo.</h2><p class="modal-intro">Defina alguns detalhes. O resto fica por conta da imaginação — e do gerador.</p>
-        <label class="field-label" for="world-name">Nome do mundo</label><input class="text-field" id="world-name" name="world-name" placeholder="Ex.: As Terras de Eldoria" maxlength="54">
-        <div class="field-grid"><label class="field-label">Reinos <select class="text-field" id="world-realms"><option>3</option><option>1</option><option>2</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select></label><label class="field-label">Cidades por reino <select class="text-field" id="world-cities"><option>3</option><option>1</option><option>2</option><option>4</option><option>5</option><option>6</option></select></label></div>
-        <div class="field-grid"><label class="field-label">NPCs por cidade <select class="text-field" id="world-npcs"><option>4</option><option>0</option><option>2</option><option>3</option><option>5</option><option>6</option><option>8</option></select></label><label class="field-label">Seed <input class="text-field" id="world-seed" inputmode="numeric" placeholder="Aleatória"></label></div>
-        <div class="modal-actions"><button class="button button-quiet" value="cancel">Cancelar</button><button class="button button-primary" id="create-world-button" value="default"><span data-icon="spark"></span>Gerar meu mundo</button></div>
-      </form>
-    </dialog>
-    <dialog class="modal library-modal" id="library-modal">
-      <div class="modal-card library-modal-card">
-        <button class="modal-close icon-button" id="library-close" aria-label="Fechar"><span data-icon="close"></span></button>
-        <div class="eyebrow"><span class="eyebrow-mark">✳</span> SEUS UNIVERSOS</div>
-        <h2>Biblioteca de mundos.</h2>
-        <p class="modal-intro">Seus mundos são salvos automaticamente neste navegador.</p>
-        <div class="library-toolbar"><span class="entity-count" id="library-count">0 mundos</span><div><button class="button button-quiet button-small" data-action="import"><span data-icon="upload"></span>Importar</button><button class="button button-primary button-small" data-action="new-world"><span data-icon="plus"></span>Novo mundo</button></div></div>
-        <div class="library-list" id="world-library-list"></div>
-      </div>
-    </dialog>
-    <dialog class="modal" id="detail-modal"><div class="modal-card detail-modal-card"><button class="modal-close icon-button" id="detail-close" aria-label="Fechar"><span data-icon="close"></span></button><div id="detail-content"></div></div></dialog>
-    <dialog class="modal entity-editor-modal" id="entity-editor-modal"><div class="modal-card"><button class="modal-close icon-button" id="entity-editor-close" aria-label="Fechar"><span data-icon="close"></span></button><div id="entity-editor-content"></div></div></dialog>
-    <dialog class="modal" id="library-restore-modal"><div class="modal-card"><div class="eyebrow">BACKUP COMPLETO</div><h2>Restaurar biblioteca</h2><p class="modal-intro">Escolha como combinar os mundos do arquivo com os mundos salvos neste navegador.</p><div class="restore-options"><button class="button button-quiet" data-action="restore-library-merge">Mesclar mundos</button><button class="button button-primary" data-action="restore-library-replace">Substituir biblioteca</button></div><button class="restore-cancel" data-action="restore-library-cancel">Cancelar</button></div></dialog>
-    <section class="forge-screen" id="forge-screen" aria-hidden="true" aria-live="polite" aria-label="Criando seu mundo">
-      <div class="forge-glow forge-glow-one"></div><div class="forge-glow forge-glow-two"></div>
-      <div class="forge-window">
-        <div class="forge-window-top"><span class="window-dots"><i></i><i></i><i></i></span><span>WORLD FORGE / PROCESSO DE CRIAÇÃO</span><span class="forge-orbit">✳</span></div>
-        <div class="forge-content">
-          <div class="forge-symbol"><span>✳</span><i></i><i></i><i></i></div>
-          <div class="eyebrow"><span class="eyebrow-mark">✳</span> O UNIVERSO ESTÁ TOMANDO FORMA</div>
-          <h2 id="forge-title">Tecendo um novo mundo.</h2>
-          <p id="forge-step">Alinhando as primeiras estrelas...</p>
-          <div class="forge-progress"><div class="forge-progress-fill" id="forge-progress-fill"></div><span class="forge-progress-glint"></span></div>
-          <div class="forge-progress-meta"><span id="forge-progress-label">PREPARANDO O TEAR</span><span id="forge-progress-percent">0%</span></div>
-          <div class="forge-temporary-widgets" aria-label="Status temporários">
-            <div class="temporary-widget"><span class="live-indicator"></span><strong id="forge-status-one">Sincronizando ideias</strong><span class="status-spinner"></span></div>
-            <div class="temporary-widget"><span class="live-indicator"></span><strong id="forge-status-two">Preparando o mapa astral</strong><span class="status-spinner"></span></div>
-          </div>
-          <div class="forge-footnote"><span class="forge-lock">◈</span> Este processo pode levar alguns instantes. Seu mundo será salvo neste dispositivo.</div>
-        </div>
-      </div>
-      <div class="forge-screen-footer"><span>WORLDFORGE RPG</span><span>UM NOVO CAPÍTULO COMEÇA EM BREVE</span></div>
-    </section>
-    <dialog class="modal explorer-profile-dialog" id="explorer-profile-dialog" aria-labelledby="explorer-profile-title">
-      <div class="modal-card profile-card">
-        <form method="dialog" class="profile-close-form"><button class="modal-close icon-button" aria-label="Fechar perfil"><span data-icon="close"></span></button></form>
-        <div class="eyebrow"><span class="eyebrow-mark">&#9670;</span> SEU ESPAÇO</div>
-        <h2 id="explorer-profile-title">Perfil do explorador</h2>
-        <p class="modal-intro">Personalize como você aparece neste dispositivo. Seu perfil é local e não usa uma conta online.</p>
-        <div class="profile-local-notice"><span class="profile-local-indicator"></span><div><strong>Perfil salvo neste navegador</strong><small>Não é enviado nem sincronizado com outros dispositivos.</small></div><span class="profile-local-tag">LOCAL</span></div>
-        <div class="profile-banner-preview" id="profile-banner-preview"><span class="profile-banner-label">BANNER DO PERFIL</span><div class="profile-banner-actions"><button class="button button-quiet button-small" type="button" data-action="profile-banner">Escolher banner</button><button class="button button-quiet button-small" id="profile-reset-banner" type="button" data-action="profile-reset-banner" hidden>Remover</button></div></div>
-        <div class="profile-visual-row"><div class="profile-photo-preview" id="profile-photo-preview"><img id="profile-photo-image" alt="" hidden><span id="profile-photo-initial">E</span></div><div class="profile-photo-copy"><strong>Foto de perfil</strong><small>JPG, PNG, WebP ou GIF · até 8 MB</small><div class="profile-photo-actions"><button class="button button-quiet button-small" type="button" data-action="profile-photo">Escolher foto</button><button class="button button-quiet button-small" id="profile-reset-photo" type="button" data-action="profile-reset-photo" hidden>Remover</button></div></div></div>
-        <form id="profile-form" class="profile-edit-form">
-          <div class="profile-fields"><label class="field-label" for="profile-name-input">Como quer ser chamado?<input class="text-field" id="profile-name-input" name="profile-name" maxlength="24" autocomplete="nickname" placeholder="Seu nome de explorador" required></label><label class="field-label" for="profile-bio-input">Uma frase sobre você <span class="profile-optional">OPCIONAL</span><input class="text-field" id="profile-bio-input" name="profile-bio" maxlength="100" placeholder="Ex.: criando mundos e contando histórias"></label></div>
-          <button class="button button-primary" type="submit">Salvar perfil</button>
-        </form>
-        <div class="profile-accent-section"><div class="profile-accent-heading"><strong>Cor de destaque</strong><small>Escolha o tom do seu perfil</small></div><div class="profile-accent-options" role="group" aria-label="Cor de destaque do perfil"><button type="button" class="profile-accent-option accent-sage" data-action="profile-accent-sage" data-profile-accent="sage" aria-label="Verde sálvia" aria-pressed="true"></button><button type="button" class="profile-accent-option accent-violet" data-action="profile-accent-violet" data-profile-accent="violet" aria-label="Violeta" aria-pressed="false"></button><button type="button" class="profile-accent-option accent-ocean" data-action="profile-accent-ocean" data-profile-accent="ocean" aria-label="Azul oceano" aria-pressed="false"></button><button type="button" class="profile-accent-option accent-coral" data-action="profile-accent-coral" data-profile-accent="coral" aria-label="Coral" aria-pressed="false"></button><button type="button" class="profile-accent-option accent-amber" data-action="profile-accent-amber" data-profile-accent="amber" aria-label="Âmbar" aria-pressed="false"></button></div></div>
-        <p class="profile-storage-note" id="profile-bio-display">Um explorador preparando sua próxima aventura.</p>
-        <div class="profile-stats">
-          <div><small>MUNDOS SALVOS</small><strong id="profile-world-count">0</strong></div>
-          <div><small>MUNDO ATUAL</small><strong id="profile-active-world">Nenhum mundo aberto</strong></div>
-          <div><small>TURNO ATUAL</small><strong id="profile-turn-count">—</strong></div>
-        </div>
-        <div class="profile-shortcuts-label">ATALHOS</div>
-        <div class="profile-shortcuts">
-          <button class="button button-quiet button-small" type="button" data-action="profile-library"><span data-icon="book"></span>Meus mundos</button>
-          <button class="button button-quiet button-small" type="button" data-action="profile-backup"><span data-icon="download"></span>Backup completo</button>
-          <button class="button button-quiet button-small" type="button" data-action="profile-settings"><span data-icon="settings"></span>Configurações</button>
-        </div>
-      </div>
-    </dialog>
-    <input id="profile-avatar-input" type="file" accept="image/jpeg,image/png,image/webp,image/gif" hidden>
-    <input id="profile-banner-input" type="file" accept="image/jpeg,image/png,image/webp,image/gif" hidden>
-    <input id="import-file" type="file" accept=".json,application/json" hidden>
-    <input id="library-import-file" type="file" accept=".json,application/json" hidden>
-    <div class="toast-region" id="toast-region" aria-live="polite"></div>
-    <script src="./cloud-config.js?v=1" defer></script>
-    <script src="./app.js?v=20" defer></script>
-  </body>
+<div style="background:#ffffff; border-radius:16px; padding:35px; box-shadow:0 8px 30px rgba(0,0,0,0.08); margin-bottom:35px;">
+<h2 style="font-size:1.8rem; color:#1a202c; margin-top:0; border-bottom:2px solid #e2e8f0; padding-bottom:15px;">🔒 Your Privacy is Our Top Priority</h2>
+<p>Stonqs is built on a "local-first" philosophy. That means <strong>all your financial data lives only on your computer</strong> — we have zero access to it, we don't store anything in the cloud, and we never will. There's no account, no password to remember, no server to connect to.</p>
+
+<p style="background:#f0fff4; border-left:4px solid #38a169; padding:15px 20px; border-radius:0 8px 8px 0;">Unlike online portfolio trackers, your sensitive financial information never leaves your device. No tracking, no profiling, no data mining. Just you and your data — completely private.</p>
+</div>
+
+<div style="background:#ffffff; border-radius:16px; padding:35px; box-shadow:0 8px 30px rgba(0,0,0,0.08); margin-bottom:35px;">
+<h2 style="font-size:1.8rem; color:#1a202c; margin-top:0; border-bottom:2px solid #e2e8f0; padding-bottom:15px;">✨ Powerful Features to Take Control</h2>
+
+<div style="display:flex; flex-wrap:wrap; gap:25px; margin-top:20px;">
+<div style="flex:1; min-width:250px; text-align:center; padding:20px; background:#faf5ff; border-radius:12px;">
+<h3 style="font-size:1.2rem; color:#6b46c1; margin-top:0;">📊 True Returns</h3>
+<p>See your actual performance with industry-standard <strong>time-weighted</strong> and <strong>money-weighted</strong> return calculations. No more guesswork — know exactly how your money is growing.</p>
+</div>
+
+<div style="flex:1; min-width:250px; text-align:center; padding:20px; background:#f0f9ff; border-radius:12px;">
+<h3 style="font-size:1.2rem; color:#2c5282; margin-top:0;">🌍 Multi-Currency Support</h3>
+<p>Have accounts in different currencies? No problem. Stonqs handles multiple currencies seamlessly, calculating accurate returns across all your holdings.</p>
+</div>
+
+<div style="flex:1; min-width:250px; text-align:center; padding:20px; background:#f0fff4; border-radius:12px;">
+<h3 style="font-size:1.2rem; color:#276749; margin-top:0;">📥 Broker CSV Import</h3>
+<p>Already have transactions with your broker? Simply import your CSV files and let Stonqs organize everything automatically. No manual entry needed.</p>
+</div>
+</div>
+
+<div style="flex:1; min-width:250px; text-align:center; padding:20px; background:#fffaf0; border-radius:12px;">
+<h3 style="font-size:1.2rem; color:#9b2c2c; margin-top:0;">⚡ Fast &amp; Responsive</h3>
+<p>Built on cutting-edge technology (Rust + Tauri), Stonqs is lightning-fast, uses minimal system resources, and feels smooth even with thousands of transactions.</p>
+</div>
+</div>
+
+<div style="background:#ffffff; border-radius:16px; padding:35px; box-shadow:0 8px 30px rgba(0,0,0,0.08); margin-bottom:35px;">
+<h2 style="font-size:1.8rem; color:#1a202c; margin-top:0; border-bottom:2px solid #e2e8f0; padding-bottom:15px;">🛠️ How to Get the Most Out of Stonqs</h2>
+
+<h3 style="font-size:1.2rem; margin-top:25px;">Adding Your First Account</h3>
+<p>When you open Stonqs for the first time, click "+ Add Account" on the main screen. You can name it anything (e.g., "My Brokerage", "401k", "Crypto Wallet"), select the currency, and begin adding your holdings.</p>
+
+<h3 style="font-size:1.2rem; margin-top:25px;">Importing Transactions from CSV</h3>
+<p>From your broker's website, export your transaction history. Look for a download or export button (usually called CSV, Excel, or Account History). Once you have the file, in Stonqs, click "Import" and select that file. The app will automatically match and add the transactions.</p>
+
+<h3 style="font-size:1.2rem; margin-top:25px;">Understanding Your Returns</h3>
+<p>The dashboard shows your portfolio at a glance. <strong>Time-Weighted Return (TWR)</strong> measures how your investments perform, removing the effect of deposits or withdrawals you make. The <strong>Money-Weighted Return (XIRR)</strong> reflects your actual personal return, including the timing of your money moves. Both are valuable — Stonqs gives you both.</p>
+
+<h3 style="font-size:1.2rem; margin-top:25px;">Keeping Data Safe</h3>
+<p>We recommend backing up your data folder regularly (just copy the Stonqs data folder to a USB drive or cloud storage you trust). This ensures your records remain safe even if your computer changes.</p>
+</div>
+
+<div style="background:#ffffff; border-radius:16px; padding:35px; box-shadow:0 8px 30px rgba(0,0,0,0.08); margin-bottom:35px; text-align:center;">
+<h2 style="font-size:1.8rem; color:#1a202c; margin-top:0;">💖 Enjoying Stonqs?</h2>
+<p style="font-size:1.2rem;">Help us grow! Your star on GitHub helps others discover this free tool.</p>
+
+<a href="https://github.com/LordBooming/Stonqs/releases" style="display:inline-block; background:#3182ce; color:#ffffff; padding:15px 40px; border-radius:50px; font-size:1.1rem; font-weight:600; text-decoration:none; box-shadow:0 8px 25px rgba(49,130,206,0.3); transition:transform 0.2s; margin:10px;">⭐ Download Now</a>
+</div>
+
+<div style="background:#edf2f7; border-radius:12px; padding:20px 25px; font-size:0.95rem; color:#4a5568;">
+<h3 style="font-size:1.2rem; color:#2d3748; margin:0 0 10px 0;">🙋 Frequently Asked Questions</h3>
+<p><strong>Q: Is Stonqs really free?</strong><br>Yes! Stonqs is 100% open-source and free to use forever. No hidden costs, no premium tiers.</p>
+<p><strong>Q: Which platforms are supported?</strong><br>Stonqs runs on major desktop operating systems including Windows, macOS, and Linux (via the releases page).</p>
+<p><strong>Q: Will my data sync across devices?</strong><br>No, by design. Your data stays local to each device. This ensures maximum privacy and data security.</p>
+<p><strong>Q: Need help or have suggestions?</strong><br>Visit our GitHub page to open issues, ask questions, or see what other users are saying.</p>
+</div>
+
+<div style="text-align:center; padding:40px 0 20px 0; font-size:0.9rem; color:#a0aec0;">
+<p style="margin:0;">© Stonqs — Built with ❤️ by the community. Data is yours, always.</p>
+</div>
+
+</div>
+</body>
 </html>
