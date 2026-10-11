@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Crie, organize e explore mundos de fantasia com o WorldForge RPG.">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>WorldForge RPG — seu mundo, em construção</title>
+    <link rel="icon" href="./assets/icon.svg" type="image/svg+xml">
+    <link rel="manifest" href="./manifest.webmanifest">
+    <link rel="stylesheet" href="./styles.css?v=3">
+    <link rel="stylesheet" href="./animations.css">
+    <link rel="stylesheet" href="./theme-black.css?v=12">
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <a class="brand" href="#inicio" aria-label="WorldForge, início">
+          <span class="brand-mark"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 7.5 11 24l5-12 5 12 6-16.5"/><path d="M10 7.5h12"/></svg></span>
+          <span class="brand-copy"><strong>worldforge</strong><small>RPG WORLD BUILDER</small></span>
+        </a>
+
+        <div class="sidebar-label">ESPAÇO DE TRABALHO</div>
+        <button class="world-switcher" id="world-switcher" type="button" aria-haspopup="dialog">
+          <span class="world-avatar" id="world-avatar">E</span>
+          <span class="switcher-copy"><strong id="sidebar-world-name">Eldoria</strong><small id="world-switcher-meta"><i class="status-dot"></i> Mundo atual</small></span>
+          <svg class="chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg>
+        </button>
+
+        <nav class="main-nav" aria-label="Navegação principal">
+          <div class="sidebar-label">GERENCIAR</div>
+          <a class="nav-link active" href="#inicio" data-view="inicio"><span class="nav-icon" data-icon="grid"></span>Visão geral</a>
+          <a class="nav-link" href="#reinos" data-view="reinos"><span class="nav-icon" data-icon="globe"></span>Reinos <span class="nav-count" data-count="reinos">0</span></a>
+          <a class="nav-link" href="#cidades" data-view="cidades"><span class="nav-icon" data-icon="building"></span>Cidades <span class="nav-count" data-count="cidades">0</span></a>
+          <a class="nav-link" href="#npcs" data-view="npcs"><span class="nav-icon" data-icon="users"></span>Personagens <span class="nav-count" data-count="npcs">0</span></a>
+          <a class="nav-link" href="#relacoes" data-view="relacoes"><span class="nav-icon" data-icon="users"></span>Rela&#231;&#245;es <span class="nav-count" data-count="relacoes">0</span></a>
+          <a class="nav-link" href="#missoes" data-view="missoes"><span class="nav-icon" data-icon="scroll"></span>Missões <span class="nav-count" data-count="missoes">0</span></a>
+          <a class="nav-link" href="#eventos" data-view="eventos"><span class="nav-icon" data-icon="spark"></span>Eventos <span class="nav-count" data-count="eventos">0</span></a>
+          <a class="nav-link" href="#monstros" data-view="monstros"><span class="nav-icon" data-icon="paw"></span>Bestiário</a>
+          <div class="sidebar-label nav-secondary-label">PREFERÊNCIAS</div>
+          <a class="nav-link" href="#configuracoes" data-view="configuracoes"><span class="nav-icon" data-icon="settings"></span>Configurações</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <button class="upgrade-card" type="button" data-coming-soon>
+            <span class="upgrade-orbit">✳</span><span><strong>Feito para crescer</strong><small>Novidades a caminho</small></span><span class="arrow-small">↗</span>
+          </button>
+          <button class="profile-button" type="button" data-coming-soon>
+            <span class="profile-avatar">W</span><span class="profile-copy"><strong>Explorador</strong><small>Conta local</small></span><span class="profile-dots">•••</span>
+          </button>
+        </div>
+      </aside>
+
+      <main class="main-area">
+        <header class="topbar">
+          <div class="topbar-left"><button class="mobile-menu icon-button" id="menu-toggle" aria-label="Abrir navegação"><span data-icon="menu"></span></button><div class="breadcrumb"><span>WorldForge</span><span class="crumb-slash">/</span><strong id="breadcrumb-current">Visão geral</strong></div></div>
+          <div class="topbar-actions">
+            <label class="search-box"><span data-icon="search"></span><input id="global-search" type="search" placeholder="Buscar no mundo..." aria-label="Buscar no mundo"><kbd>⌘ K</kbd></label>
+            <span class="topbar-divider"></span>
+            <button class="icon-button notification-button" aria-label="Notificações" data-coming-soon><span data-icon="bell"></span><i></i></button>
+            <button class="button button-primary button-small" id="new-world-top"><span data-icon="plus"></span>Novo mundo</button>
+          </div>
+        </header>
+
+        <div class="content-wrap" id="content-wrap">
+          <section class="view" id="view-inicio" data-view-panel="inicio"></section>
+          <section class="view hidden" id="view-reinos" data-view-panel="reinos"></section>
+          <section class="view hidden" id="view-cidades" data-view-panel="cidades"></section>
+          <section class="view hidden" id="view-npcs" data-view-panel="npcs"></section>
+          <section class="view hidden" id="view-relacoes" data-view-panel="relacoes"></section>
+          <section class="view hidden" id="view-missoes" data-view-panel="missoes"></section>
+          <section class="view hidden" id="view-eventos" data-view-panel="eventos"></section>
+          <section class="view hidden" id="view-monstros" data-view-panel="monstros"></section>
+          <section class="view hidden" id="view-configuracoes" data-view-panel="configuracoes"></section>
+          <footer class="app-footer"><span>WorldForge RPG <span id="app-version">· 1.0</span></span><span>Seu próximo mundo começa com uma ideia.</span><span class="footer-legal-links"><button type="button" data-view="configuracoes" data-open-settings="privacy">Privacidade</button><button type="button" data-view="configuracoes" data-open-settings="terms">Termos de uso</button></span></footer>
+        </div>
+      </main>
+    </div>
+
+    <dialog class="modal consent-modal" id="terms-consent-dialog" aria-labelledby="terms-consent-title">
+      <div class="modal-card consent-card">
+        <div class="eyebrow"><span class="eyebrow-mark">&#9670;</span> WORLDFORGE RPG</div>
+        <h2 id="terms-consent-title">Voc&ecirc; aceita os Termos de Uso?</h2>
+        <p class="modal-intro">Antes de entrar, leia os termos e o aviso de privacidade. O WorldForge s&oacute; ser&aacute; liberado depois da sua confirma&ccedil;&atilde;o.</p>
+        <div class="consent-documents">
+          <details><summary>Termos de Uso (texto completo)</summary><div class="consent-document-copy"><p>O WorldForge RPG &eacute; uma ferramenta para criar e organizar mundos fict&iacute;cios. Voc&ecirc; pode usar os resultados em projetos pessoais ou outros projetos, respeitando a lei e os direitos de terceiros.</p><p>Voc&ecirc; &eacute; respons&aacute;vel pelo conte&uacute;do que inserir ou importar e por manter backups do que deseja preservar. N&atilde;o use o app para armazenar conte&uacute;do ilegal, dados pessoais de terceiros sem autoriza&ccedil;&atilde;o ou material que viole direitos de terceiros.</p><p>O aplicativo &eacute; oferecido como est&aacute;, pode mudar ou ficar indispon&iacute;vel e n&atilde;o oferece conta, recupera&ccedil;&atilde;o de dados ou backup em servidores do WorldForge. Exporte seus mundos regularmente.</p><p>Contas, sincroniza&ccedil;&atilde;o em nuvem, IA, cr&eacute;ditos, assinaturas e pagamentos n&atilde;o est&atilde;o ativos. Se forem lan&ccedil;ados, informa&ccedil;&otilde;es e termos espec&iacute;ficos ser&atilde;o apresentados antes da ativa&ccedil;&atilde;o. Os termos vigentes ficam dispon&iacute;veis nas Configura&ccedil;&otilde;es.</p></div></details>
+          <details><summary>Aviso de Privacidade (texto completo)</summary><div class="consent-document-copy"><p>Mundos, anota&ccedil;&otilde;es, tema e outras prefer&ecirc;ncias s&atilde;o guardados no armazenamento local do navegador e n&atilde;o s&atilde;o enviados a um servidor do WorldForge. N&atilde;o usamos analytics ou publicidade. O app usa um cookie pr&oacute;prio para lembrar a escolha deste aviso por 180 dias; cookies opcionais de analytics e publicidade n&atilde;o est&atilde;o ativos.</p><p>Quando hospedado no GitHub Pages, o GitHub registra e armazena o IP dos visitantes para fins de seguran&ccedil;a. Veja a <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages" target="_blank" rel="noopener noreferrer">documenta&ccedil;&atilde;o do GitHub Pages</a> e a <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">pol&iacute;tica de privacidade do GitHub</a>.</p><p>Voc&ecirc; pode exportar e apagar os mundos nas Configura&ccedil;&otilde;es. O aceite destes termos fica neste navegador, pode ser revogado e n&atilde;o identifica a pessoa que aceitou. Sons e notifica&ccedil;&otilde;es dependem das permiss&otilde;es do navegador.</p><p>Para d&uacute;vidas, use o canal de contato indicado junto &agrave; distribui&ccedil;&atilde;o do projeto.</p></div></details>
+          <a class="consent-policy-link" href="https://www.gov.br/anpd/pt-br/centrais-de-conteudo/materiais-educativos-e-publicacoes/guia_orientativo_cookies_e_protecao_de_dados_pessoais" target="_blank" rel="noopener noreferrer">Guia de cookies e privacidade da ANPD <span aria-hidden="true">&#8599;</span></a>
+        </div>
+        <label class="consent-check"><input type="checkbox" id="terms-consent-checkbox"><span>Li e aceito os Termos de Uso e confirmo que li o Aviso de Privacidade.</span></label>
+        <p class="consent-record-note">Registramos a vers&atilde;o e a data do aceite neste navegador. Voc&ecirc; pode rever ou revogar o aceite nas Configura&ccedil;&otilde;es.</p>
+        <div class="consent-actions" id="terms-consent-actions"><button class="button button-quiet" type="button" data-consent-action="decline-terms">N&atilde;o aceito</button><button class="button button-primary" type="button" id="terms-consent-accept" data-consent-action="accept-terms" disabled>Aceitar e continuar</button></div>
+        <div class="consent-declined hidden" id="terms-consent-declined" role="status"><strong>O WorldForge continua bloqueado.</strong><span>Sem o aceite, voc&ecirc; n&atilde;o pode usar o aplicativo. Feche esta aba ou volte para ler os documentos.</span><button class="button button-quiet button-small" type="button" data-consent-action="reconsider-terms">Voltar aos termos</button></div>
+        <button class="consent-cancel button button-quiet button-small hidden" id="terms-consent-cancel" type="button" data-consent-action="cancel-terms">Voltar sem alterar</button>
+        <button class="consent-revoke" id="terms-consent-revoke" type="button" data-consent-action="decline-terms" hidden>Revogar meu aceite e sair</button>
+      </div>
+    </dialog>
+
+    <aside class="cookie-notice hidden" id="cookie-notice" role="region" aria-live="polite" aria-labelledby="cookie-notice-title">
+      <div class="cookie-notice-copy"><span class="cookie-mark" aria-hidden="true">&#9679;</span><div><h2 id="cookie-notice-title">Armazenamento e cookies</h2><p>Salvamos seus mundos neste navegador. Usamos apenas um cookie t&eacute;cnico para lembrar esta escolha; n&atilde;o h&aacute; cookies de analytics ou publicidade.</p></div></div>
+      <div class="cookie-notice-actions"><button class="button button-quiet button-small" type="button" data-consent-action="reject-optional">Rejeitar n&atilde;o necess&aacute;rios</button><button class="button button-quiet button-small" type="button" data-consent-action="open-cookie-settings">Configurar</button><button class="button button-primary button-small" type="button" data-consent-action="save-cookie-choice">Continuar com essenciais</button></div>
+    </aside>
+
+    <dialog class="modal consent-modal cookie-preferences-modal" id="cookie-preferences-dialog" aria-labelledby="cookie-preferences-title">
+      <div class="modal-card consent-card">
+        <button class="modal-close icon-button" type="button" aria-label="Fechar" data-consent-action="close-cookie-settings"><span data-icon="close"></span></button>
+        <div class="eyebrow"><span class="eyebrow-mark">&#9670;</span> PRIVACIDADE</div>
+        <h2 id="cookie-preferences-title">Prefer&ecirc;ncias de cookies</h2>
+        <p class="modal-intro">O WorldForge n&atilde;o usa cookies opcionais de analytics ou publicidade nesta vers&atilde;o.</p>
+        <div class="cookie-category"><span class="cookie-category-state is-required">Sempre ativo</span><strong>Essenciais</strong><p>Um cookie pr&oacute;prio lembra sua escolha por 180 dias. Se o navegador bloquear cookies, a escolha fica no armazenamento local. Mundos e prefer&ecirc;ncias do app ficam no armazenamento local do navegador.</p></div>
+        <div class="cookie-category is-inactive"><span class="cookie-category-state">Inativo</span><strong>Analytics</strong><p>N&atilde;o instalado. N&atilde;o medimos seu uso do WorldForge.</p></div>
+        <div class="cookie-category is-inactive"><span class="cookie-category-state">Inativo</span><strong>Publicidade</strong><p>N&atilde;o instalado. N&atilde;o usamos cookies para an&uacute;ncios ou perfilamento.</p></div>
+        <div class="consent-actions"><button class="button button-quiet" type="button" data-consent-action="reject-optional">Rejeitar n&atilde;o necess&aacute;rios</button><button class="button button-primary" type="button" data-consent-action="save-cookie-choice">Salvar prefer&ecirc;ncia</button></div>
+      </div>
+    </dialog>
+
+    <dialog class="modal" id="world-modal">
+      <form method="dialog" class="modal-card" id="world-form">
+        <button class="modal-close icon-button" value="cancel" aria-label="Fechar"><span data-icon="close"></span></button>
+        <div class="eyebrow"><span class="eyebrow-mark">✳</span> COMEÇAR UMA NOVA HISTÓRIA</div>
+        <h2>Forje um novo mundo.</h2><p class="modal-intro">Defina alguns detalhes. O resto fica por conta da imaginação — e do gerador.</p>
+        <label class="field-label" for="world-name">Nome do mundo</label><input class="text-field" id="world-name" name="world-name" placeholder="Ex.: As Terras de Eldoria" maxlength="54">
+        <div class="field-grid"><label class="field-label">Reinos <select class="text-field" id="world-realms"><option>3</option><option>1</option><option>2</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select></label><label class="field-label">Cidades por reino <select class="text-field" id="world-cities"><option>3</option><option>1</option><option>2</option><option>4</option><option>5</option><option>6</option></select></label></div>
+        <div class="field-grid"><label class="field-label">NPCs por cidade <select class="text-field" id="world-npcs"><option>4</option><option>0</option><option>2</option><option>3</option><option>5</option><option>6</option><option>8</option></select></label><label class="field-label">Seed <input class="text-field" id="world-seed" inputmode="numeric" placeholder="Aleatória"></label></div>
+        <div class="modal-actions"><button class="button button-quiet" value="cancel">Cancelar</button><button class="button button-primary" id="create-world-button" value="default"><span data-icon="spark"></span>Gerar meu mundo</button></div>
+      </form>
+    </dialog>
+    <dialog class="modal library-modal" id="library-modal">
+      <div class="modal-card library-modal-card">
+        <button class="modal-close icon-button" id="library-close" aria-label="Fechar"><span data-icon="close"></span></button>
+        <div class="eyebrow"><span class="eyebrow-mark">✳</span> SEUS UNIVERSOS</div>
+        <h2>Biblioteca de mundos.</h2>
+        <p class="modal-intro">Seus mundos são salvos automaticamente neste navegador.</p>
+        <div class="library-toolbar"><span class="entity-count" id="library-count">0 mundos</span><div><button class="button button-quiet button-small" data-action="import"><span data-icon="upload"></span>Importar</button><button class="button button-primary button-small" data-action="new-world"><span data-icon="plus"></span>Novo mundo</button></div></div>
+        <div class="library-list" id="world-library-list"></div>
+      </div>
+    </dialog>
+    <dialog class="modal" id="detail-modal"><div class="modal-card detail-modal-card"><button class="modal-close icon-button" id="detail-close" aria-label="Fechar"><span data-icon="close"></span></button><div id="detail-content"></div></div></dialog>
+    <dialog class="modal entity-editor-modal" id="entity-editor-modal"><div class="modal-card"><button class="modal-close icon-button" id="entity-editor-close" aria-label="Fechar"><span data-icon="close"></span></button><div id="entity-editor-content"></div></div></dialog>
+    <dialog class="modal" id="library-restore-modal"><div class="modal-card"><div class="eyebrow">BACKUP COMPLETO</div><h2>Restaurar biblioteca</h2><p class="modal-intro">Escolha como combinar os mundos do arquivo com os mundos salvos neste navegador.</p><div class="restore-options"><button class="button button-quiet" data-action="restore-library-merge">Mesclar mundos</button><button class="button button-primary" data-action="restore-library-replace">Substituir biblioteca</button></div><button class="restore-cancel" data-action="restore-library-cancel">Cancelar</button></div></dialog>
+    <section class="forge-screen" id="forge-screen" aria-hidden="true" aria-live="polite" aria-label="Criando seu mundo">
+      <div class="forge-glow forge-glow-one"></div><div class="forge-glow forge-glow-two"></div>
+      <div class="forge-window">
+        <div class="forge-window-top"><span class="window-dots"><i></i><i></i><i></i></span><span>WORLD FORGE / PROCESSO DE CRIAÇÃO</span><span class="forge-orbit">✳</span></div>
+        <div class="forge-content">
+          <div class="forge-symbol"><span>✳</span><i></i><i></i><i></i></div>
+          <div class="eyebrow"><span class="eyebrow-mark">✳</span> O UNIVERSO ESTÁ TOMANDO FORMA</div>
+          <h2 id="forge-title">Tecendo um novo mundo.</h2>
+          <p id="forge-step">Alinhando as primeiras estrelas...</p>
+          <div class="forge-progress"><div class="forge-progress-fill" id="forge-progress-fill"></div><span class="forge-progress-glint"></span></div>
+          <div class="forge-progress-meta"><span id="forge-progress-label">PREPARANDO O TEAR</span><span id="forge-progress-percent">0%</span></div>
+          <div class="forge-temporary-widgets" aria-label="Status temporários">
+            <div class="temporary-widget"><span class="live-indicator"></span><strong id="forge-status-one">Sincronizando ideias</strong><span class="status-spinner"></span></div>
+            <div class="temporary-widget"><span class="live-indicator"></span><strong id="forge-status-two">Preparando o mapa astral</strong><span class="status-spinner"></span></div>
+          </div>
+          <div class="forge-footnote"><span class="forge-lock">◈</span> Este processo pode levar alguns instantes. Seu mundo será salvo neste dispositivo.</div>
+        </div>
+      </div>
+      <div class="forge-screen-footer"><span>WORLDFORGE RPG</span><span>UM NOVO CAPÍTULO COMEÇA EM BREVE</span></div>
+    </section>
+    <input id="import-file" type="file" accept=".json,application/json" hidden>
+    <input id="library-import-file" type="file" accept=".json,application/json" hidden>
+    <div class="toast-region" id="toast-region" aria-live="polite"></div>
+    <script src="./app.js?v=14" defer></script>
+  </body>
+</html>
