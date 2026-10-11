@@ -441,16 +441,33 @@ As seguintes melhorias são possibilidades futuras, não funcionalidades garanti
 - Integração segura com IA, após existir um serviço de backend para proteger credenciais.
 - Créditos e assinaturas, quando houver infraestrutura de contas e pagamentos.
 
-A interface web &eacute; est&aacute;tica e compat&iacute;vel com GitHub Pages. A p&aacute;gina restringe scripts e conex&otilde;es &agrave; pr&oacute;pria origem. N&atilde;o h&aacute; contas, sincroniza&ccedil;&atilde;o em nuvem ou processamento de pagamentos. Contribui&ccedil;&otilde;es opcionais por Pix s&atilde;o transfer&ecirc;ncias feitas no banco, fora do aplicativo. Mundos e prefer&ecirc;ncias ficam no armazenamento local do navegador.
+A interface web &eacute; est&aacute;tica e compat&iacute;vel com GitHub Pages. A cópia opcional na nuvem usa Supabase quando configurada; o envio de mundos é iniciado pela pessoa. Contribui&ccedil;&otilde;es opcionais por Pix s&atilde;o transfer&ecirc;ncias feitas no banco, fora do aplicativo. Mundos e prefer&ecirc;ncias permanecem no armazenamento local, e a cópia remota é separada.
 
 ---
 
 ## 13. Privacidade, segurança e termos da interface web
 
-O WorldForge é estático e compatível com GitHub Pages. Não há conta, backend próprio, nuvem, analytics, publicidade, IA conectada ou processamento de pagamentos. Mundos, anotações, preferências e aceite ficam localmente; a Oficina de ideias também funciona localmente. Backups JSON são legíveis e devem ser protegidos.
+O WorldForge é estático e compatível com GitHub Pages. A conta e a cópia de mundos na nuvem são opcionais e usam Supabase quando configuradas; os demais dados do perfil continuam locais. Não há analytics, publicidade, IA conectada ou processamento de pagamentos. Backups JSON são legíveis e devem ser protegidos.
 
 Cookie essencial lembra a escolha por até 180 dias; se bloqueado, a preferência pode ficar localmente. Service worker guarda arquivos em cache. Não há cookies opcionais. GitHub Pages pode registrar IPs por segurança; veja a [documentação](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages) e a [Declaração de Privacidade](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).
 
 Termos, privacidade, cookies e segurança estão nas Configurações. Contato: [GitHub Issues](https://github.com/Vini632/Vini632.github.io/issues); issues podem ser públicas, não envie dados confidenciais. Consulte [LGPD](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm) e [guia da ANPD](https://www.gov.br/anpd/pt-br/centrais-de-conteudo/materiais-educativos-e-publicacoes/guia_orientativo_cookies_e_protecao_de_dados_pessoais).
 
 Pix é voluntário e externo, sem processamento ou registro pelo app. Se novos recursos mudarem o tratamento de dados, revise estes avisos antes de ativá-los.
+
+
+## Conta e cópia na nuvem (GitHub Pages)
+
+O site continua estático. A camada opcional usa Supabase Auth e uma tabela Postgres compartilhada; cada linha tem owner_id, e Row Level Security com auth.uid() restringe leitura e alterações aos dados da própria conta. Isso oferece isolamento individual sem criar um banco físico por usuário. A interface envia uma cópia somente quando a pessoa escolhe Enviar; a restauração é uma mesclagem manual. Ainda não há sincronização automática, e excluir algo localmente não remove sua cópia remota.
+
+### Ativar o projeto
+
+1. Crie um projeto Supabase sob controle do mantenedor e configure a autenticação por e-mail.
+2. No SQL Editor do projeto, execute supabase/schema.sql.
+3. Em Authentication → URL Configuration, inclua a URL pública do Pages e a URL local de desenvolvimento nas URLs de redirecionamento.
+4. Copie a Project URL e a publishable key (ou a chave legacy anon) para cloud-config.js. Esses identificadores são públicos em aplicações de navegador. Nunca use secret ou service_role no site.
+5. No aplicativo, abra Configurações → Dados & backup. A pessoa pode criar conta/entrar, enviar os mundos locais, mesclar cópias de sua conta ou apagar os mundos remotos.
+
+A conta requer e-mail e senha. Quando a confirmação de e-mail estiver habilitada no Supabase, a pessoa deve confirmar o endereço antes do primeiro login. O token de sessão fica no armazenamento local do navegador. O perfil visual (foto, banner e preferências) permanece local; a cópia remota inclui os mundos da biblioteca.
+
+O recurso fica inativo enquanto cloud-config.js estiver vazio. Para publicar a integração ativa, configure o projeto, confira região/termos do provedor e atualize estes avisos de privacidade com os detalhes específicos do projeto. A chave pública não substitui RLS; não desative as políticas da tabela.
