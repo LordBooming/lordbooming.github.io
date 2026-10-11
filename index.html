@@ -10,7 +10,7 @@
     <title>WorldForge RPG — seu mundo, em construção</title>
     <link rel="icon" href="./assets/icon.svg" type="image/svg+xml">
     <link rel="manifest" href="./manifest.webmanifest">
-    <link rel="stylesheet" href="./styles.css?v=6">
+    <link rel="stylesheet" href="./styles.css?v=7">
     <link rel="stylesheet" href="./animations.css">
     <link rel="stylesheet" href="./theme-black.css?v=12">
   </head>
@@ -51,7 +51,7 @@
           <button class="upgrade-card" type="button" data-view="configuracoes" data-open-settings="support">
             <span class="upgrade-orbit">✳</span><span><strong>Doa&ccedil;&otilde;es ao projeto</strong><small>Apoio opcional via Pix</small></span><span class="arrow-small">↗</span>
           </button>
-          <div class="profile-button" aria-label="Perfil local, sem conta online"><span class="profile-avatar">W</span><span class="profile-copy"><strong>Explorador</strong><small>Conta local</small></span><span class="profile-dots" aria-hidden="true">LOCAL</span></div>
+          <button class="profile-button" id="open-profile" type="button" aria-label="Abrir perfil local" aria-haspopup="dialog" aria-controls="explorer-profile-dialog" data-action="open-profile"><span class="profile-avatar" id="profile-avatar">E</span><span class="profile-copy"><strong id="profile-display-name">Explorador</strong><small>Perfil neste navegador</small></span><span class="profile-dots" aria-hidden="true">LOCAL</span></button>
         </div>
       </aside>
 
@@ -183,9 +183,33 @@
       </div>
       <div class="forge-screen-footer"><span>WORLDFORGE RPG</span><span>UM NOVO CAPÍTULO COMEÇA EM BREVE</span></div>
     </section>
+    <dialog class="modal explorer-profile-dialog" id="explorer-profile-dialog" aria-labelledby="explorer-profile-title">
+      <div class="modal-card profile-card">
+        <form method="dialog" class="profile-close-form"><button class="modal-close icon-button" aria-label="Fechar perfil"><span data-icon="close"></span></button></form>
+        <div class="eyebrow"><span class="eyebrow-mark">&#9670;</span> SEU ESPAÇO</div>
+        <h2 id="explorer-profile-title">Perfil do explorador</h2>
+        <p class="modal-intro">Personalize como você aparece neste dispositivo. Seu perfil é local e não usa uma conta online.</p>
+        <div class="profile-local-notice"><span class="profile-local-indicator"></span><div><strong>Perfil salvo neste navegador</strong><small>Não é enviado nem sincronizado com outros dispositivos.</small></div><span class="profile-local-tag">LOCAL</span></div>
+        <form id="profile-form" class="profile-edit-form">
+          <label class="field-label" for="profile-name-input">Como quer ser chamado?<input class="text-field" id="profile-name-input" name="profile-name" maxlength="24" autocomplete="nickname" placeholder="Seu nome de explorador" required></label>
+          <button class="button button-primary" type="submit">Salvar nome</button>
+        </form>
+        <div class="profile-stats">
+          <div><small>MUNDOS SALVOS</small><strong id="profile-world-count">0</strong></div>
+          <div><small>MUNDO ATUAL</small><strong id="profile-active-world">Nenhum mundo aberto</strong></div>
+          <div><small>TURNO ATUAL</small><strong id="profile-turn-count">—</strong></div>
+        </div>
+        <div class="profile-shortcuts-label">ATALHOS</div>
+        <div class="profile-shortcuts">
+          <button class="button button-quiet button-small" type="button" data-action="profile-library"><span data-icon="book"></span>Meus mundos</button>
+          <button class="button button-quiet button-small" type="button" data-action="profile-backup"><span data-icon="download"></span>Backup completo</button>
+          <button class="button button-quiet button-small" type="button" data-action="profile-settings"><span data-icon="settings"></span>Configurações</button>
+        </div>
+      </div>
+    </dialog>
     <input id="import-file" type="file" accept=".json,application/json" hidden>
     <input id="library-import-file" type="file" accept=".json,application/json" hidden>
     <div class="toast-region" id="toast-region" aria-live="polite"></div>
-    <script src="./app.js?v=17" defer></script>
+    <script src="./app.js?v=18" defer></script>
   </body>
 </html>

@@ -1,5 +1,5 @@
-const CACHE = 'worldforge-static-v17';
-const FILES = ['./', './index.html', './styles.css?v=6', './animations.css', './theme-black.css?v=12', './app.js?v=17', './manifest.webmanifest', './assets/icon.svg'];
+const CACHE = 'worldforge-static-v18';
+const FILES = ['./', './index.html', './styles.css?v=7', './animations.css', './theme-black.css?v=12', './app.js?v=18', './manifest.webmanifest', './assets/icon.svg'];
 self.addEventListener('install', event => event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(FILES))));
 self.addEventListener('activate', event => event.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(key => key !== CACHE).map(key => caches.delete(key))))));
 self.addEventListener('fetch', event => {
