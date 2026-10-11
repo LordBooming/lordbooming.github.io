@@ -441,30 +441,10 @@ As seguintes melhorias são possibilidades futuras, não funcionalidades garanti
 - Integração segura com IA, após existir um serviço de backend para proteger credenciais.
 - Créditos e assinaturas, quando houver infraestrutura de contas e pagamentos.
 
-A interface web inicial já está incluída. IA, créditos e assinaturas são ideias futuras, não recursos ativos. Uma integração de IA ou pagamentos precisa de backend; chaves secretas não devem ser colocadas no JavaScript publicado no GitHub Pages.
+A interface web &eacute; est&aacute;tica e compat&iacute;vel com GitHub Pages. A p&aacute;gina restringe scripts e conex&otilde;es &agrave; pr&oacute;pria origem. N&atilde;o h&aacute; contas, sincroniza&ccedil;&atilde;o em nuvem ou processamento de pagamentos. Contribui&ccedil;&otilde;es opcionais por Pix s&atilde;o transfer&ecirc;ncias feitas no banco, fora do aplicativo. Mundos e prefer&ecirc;ncias ficam no armazenamento local do navegador.
 
 ---
 
 ## 13. Privacidade e segurança da interface web
 
-A interface web é estática e compatível com GitHub Pages. A página aplica uma Content Security Policy que restringe scripts e conexões à própria origem. Na versão atual, não há contas, sincronização em nuvem, anúncios, pagamentos ou recursos de IA ativos. Mundos, anotações e preferências são salvos no armazenamento local do navegador e não são enviados a um servidor próprio do WorldForge.
-
-- Na primeira visita, o app solicita aceite explícito dos Termos de Uso e confirmação de leitura do aviso de privacidade; o registro da versão e data fica somente neste navegador e pode ser revogado.
-- O aviso de cookies permite rejeitar cookies não necessários e gerenciar as preferências. Atualmente, só há um cookie técnico para lembrar a escolha, mantido por 180 dias; analytics e publicidade estão inativos.
-- O navegador pode apagar os dados locais; exporte backups JSON para guardar uma cópia.
-- Os arquivos JSON exportados não são criptografados. Importe arquivos de origem confiável; a interface limita a importação a 10 MB e valida a estrutura dos mundos.
-- A opção **Configurações → Dados & backup → Apagar dados** remove mundos, biblioteca e preferências salvos pelo WorldForge neste navegador.
-- O GitHub informa que registra e armazena o IP de visitantes do GitHub Pages para fins de segurança. Consulte a [documentação oficial do GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages) e a [LGPD](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm).
-- As telas de Privacidade e Termos de uso nas Configurações descrevem o comportamento desta versão. Complete essas informações com a identidade e o canal de contato do responsável pelo projeto antes de oferecer contas, serviços pagos ou recursos conectados.
-
-## Licença e contribuições
-
-Defina uma licença antes de distribuir o projeto publicamente. Até que uma licença seja escolhida, não presuma que terceiros tenham permissão irrestrita para redistribuir ou modificar o código.
-
-Sugestões, correções e melhorias devem preservar as funcionalidades existentes e incluir testes para novos comportamentos.
-
-## Resumo
-
-O WorldForge RPG é uma base procedural para criação de mundos de fantasia. Seu valor está na geração reproduzível de entidades, nas relações entre personagens, na simulação de eventos e na exportação estruturada dos dados.
-
-A evolução do projeto deve priorizar consistência, testes automatizados e persistência antes de adicionar sistemas cada vez mais complexos.
+A interface web &eacute; est&aacute;tica e compat&iacute;vel com GitHub Pages. A p&aacute;gina restringe scripts e conex&otilde;es &agrave; pr&oacute;pria origem. N&atilde;o h&aacute; contas, sincroniza&ccedil;&atilde;o em nuvem ou processamento de pagamentos. Contribui&ccedil;&otilde;es opcionais por Pix s&atilde;o transfer&ecirc;ncias feitas no banco, fora do aplicativo. Mundos e prefer&ecirc;ncias ficam no armazenamento local do navegador.
