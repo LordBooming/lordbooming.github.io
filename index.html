@@ -10,7 +10,7 @@
     <title>WorldForge RPG — seu mundo, em construção</title>
     <link rel="icon" href="./assets/icon.svg" type="image/svg+xml">
     <link rel="manifest" href="./manifest.webmanifest">
-    <link rel="stylesheet" href="./styles.css?v=7">
+    <link rel="stylesheet" href="./styles.css?v=8">
     <link rel="stylesheet" href="./animations.css">
     <link rel="stylesheet" href="./theme-black.css?v=12">
   </head>
@@ -51,7 +51,7 @@
           <button class="upgrade-card" type="button" data-view="configuracoes" data-open-settings="support">
             <span class="upgrade-orbit">✳</span><span><strong>Doa&ccedil;&otilde;es ao projeto</strong><small>Apoio opcional via Pix</small></span><span class="arrow-small">↗</span>
           </button>
-          <button class="profile-button" id="open-profile" type="button" aria-label="Abrir perfil local" aria-haspopup="dialog" aria-controls="explorer-profile-dialog" data-action="open-profile"><span class="profile-avatar" id="profile-avatar">E</span><span class="profile-copy"><strong id="profile-display-name">Explorador</strong><small>Perfil neste navegador</small></span><span class="profile-dots" aria-hidden="true">LOCAL</span></button>
+          <button class="profile-button" id="open-profile" type="button" aria-label="Abrir perfil local" aria-haspopup="dialog" aria-controls="explorer-profile-dialog" data-action="open-profile"><span class="profile-avatar" id="profile-avatar"><img id="profile-avatar-image" alt="" hidden><span id="profile-avatar-initial">E</span></span><span class="profile-copy"><strong id="profile-display-name">Explorador</strong><small>Perfil neste navegador</small></span><span class="profile-dots" aria-hidden="true">LOCAL</span></button>
         </div>
       </aside>
 
@@ -190,10 +190,14 @@
         <h2 id="explorer-profile-title">Perfil do explorador</h2>
         <p class="modal-intro">Personalize como você aparece neste dispositivo. Seu perfil é local e não usa uma conta online.</p>
         <div class="profile-local-notice"><span class="profile-local-indicator"></span><div><strong>Perfil salvo neste navegador</strong><small>Não é enviado nem sincronizado com outros dispositivos.</small></div><span class="profile-local-tag">LOCAL</span></div>
+        <div class="profile-banner-preview" id="profile-banner-preview"><span class="profile-banner-label">BANNER DO PERFIL</span><div class="profile-banner-actions"><button class="button button-quiet button-small" type="button" data-action="profile-banner">Escolher banner</button><button class="button button-quiet button-small" id="profile-reset-banner" type="button" data-action="profile-reset-banner" hidden>Remover</button></div></div>
+        <div class="profile-visual-row"><div class="profile-photo-preview" id="profile-photo-preview"><img id="profile-photo-image" alt="" hidden><span id="profile-photo-initial">E</span></div><div class="profile-photo-copy"><strong>Foto de perfil</strong><small>JPG, PNG, WebP ou GIF · até 8 MB</small><div class="profile-photo-actions"><button class="button button-quiet button-small" type="button" data-action="profile-photo">Escolher foto</button><button class="button button-quiet button-small" id="profile-reset-photo" type="button" data-action="profile-reset-photo" hidden>Remover</button></div></div></div>
         <form id="profile-form" class="profile-edit-form">
-          <label class="field-label" for="profile-name-input">Como quer ser chamado?<input class="text-field" id="profile-name-input" name="profile-name" maxlength="24" autocomplete="nickname" placeholder="Seu nome de explorador" required></label>
-          <button class="button button-primary" type="submit">Salvar nome</button>
+          <div class="profile-fields"><label class="field-label" for="profile-name-input">Como quer ser chamado?<input class="text-field" id="profile-name-input" name="profile-name" maxlength="24" autocomplete="nickname" placeholder="Seu nome de explorador" required></label><label class="field-label" for="profile-bio-input">Uma frase sobre você <span class="profile-optional">OPCIONAL</span><input class="text-field" id="profile-bio-input" name="profile-bio" maxlength="100" placeholder="Ex.: criando mundos e contando histórias"></label></div>
+          <button class="button button-primary" type="submit">Salvar perfil</button>
         </form>
+        <div class="profile-accent-section"><div class="profile-accent-heading"><strong>Cor de destaque</strong><small>Escolha o tom do seu perfil</small></div><div class="profile-accent-options" role="group" aria-label="Cor de destaque do perfil"><button type="button" class="profile-accent-option accent-sage" data-action="profile-accent-sage" data-profile-accent="sage" aria-label="Verde sálvia" aria-pressed="true"></button><button type="button" class="profile-accent-option accent-violet" data-action="profile-accent-violet" data-profile-accent="violet" aria-label="Violeta" aria-pressed="false"></button><button type="button" class="profile-accent-option accent-ocean" data-action="profile-accent-ocean" data-profile-accent="ocean" aria-label="Azul oceano" aria-pressed="false"></button><button type="button" class="profile-accent-option accent-coral" data-action="profile-accent-coral" data-profile-accent="coral" aria-label="Coral" aria-pressed="false"></button><button type="button" class="profile-accent-option accent-amber" data-action="profile-accent-amber" data-profile-accent="amber" aria-label="Âmbar" aria-pressed="false"></button></div></div>
+        <p class="profile-storage-note" id="profile-bio-display">Um explorador preparando sua próxima aventura.</p>
         <div class="profile-stats">
           <div><small>MUNDOS SALVOS</small><strong id="profile-world-count">0</strong></div>
           <div><small>MUNDO ATUAL</small><strong id="profile-active-world">Nenhum mundo aberto</strong></div>
@@ -207,9 +211,11 @@
         </div>
       </div>
     </dialog>
+    <input id="profile-avatar-input" type="file" accept="image/jpeg,image/png,image/webp,image/gif" hidden>
+    <input id="profile-banner-input" type="file" accept="image/jpeg,image/png,image/webp,image/gif" hidden>
     <input id="import-file" type="file" accept=".json,application/json" hidden>
     <input id="library-import-file" type="file" accept=".json,application/json" hidden>
     <div class="toast-region" id="toast-region" aria-live="polite"></div>
-    <script src="./app.js?v=18" defer></script>
+    <script src="./app.js?v=19" defer></script>
   </body>
 </html>
