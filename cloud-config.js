@@ -6,5 +6,5 @@
  */
 window.WORLDFORGE_CLOUD_CONFIG = {
   url: '',
-  publishableKey: ''
+  publishableKey: 'sb_publishable_A_UWfFS6GHU8c_0kiy8Aqg_DcBO6dCb'
 };
