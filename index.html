@@ -10,7 +10,7 @@
     <title>WorldForge RPG — seu mundo, em construção</title>
     <link rel="icon" href="./assets/icon.svg" type="image/svg+xml">
     <link rel="manifest" href="./manifest.webmanifest">
-    <link rel="stylesheet" href="./styles.css?v=5">
+    <link rel="stylesheet" href="./styles.css?v=6">
     <link rel="stylesheet" href="./animations.css">
     <link rel="stylesheet" href="./theme-black.css?v=12">
   </head>
@@ -39,6 +39,10 @@
           <a class="nav-link" href="#missoes" data-view="missoes"><span class="nav-icon" data-icon="scroll"></span>Missões <span class="nav-count" data-count="missoes">0</span></a>
           <a class="nav-link" href="#eventos" data-view="eventos"><span class="nav-icon" data-icon="spark"></span>Eventos <span class="nav-count" data-count="eventos">0</span></a>
           <a class="nav-link" href="#monstros" data-view="monstros"><span class="nav-icon" data-icon="paw"></span>Bestiário</a>
+          <div class="sidebar-label nav-secondary-label">COMUNIDADE</div>
+          <a class="nav-link" href="#foruns" data-view="foruns"><span class="nav-icon" data-icon="users"></span>Fórum da Forja <span class="nav-coming-badge">BREVE</span></a>
+          <a class="nav-link" href="#vitrine" data-view="vitrine"><span class="nav-icon" data-icon="globe"></span>Vitrine de Mundos <span class="nav-coming-badge">BREVE</span></a>
+          <a class="nav-link" href="#guilda" data-view="guilda"><span class="nav-icon" data-icon="spark"></span>Guilda de Criadores <span class="nav-coming-badge">BREVE</span></a>
           <div class="sidebar-label nav-secondary-label">PREFERÊNCIAS</div>
           <a class="nav-link" href="#configuracoes" data-view="configuracoes"><span class="nav-icon" data-icon="settings"></span>Configurações</a>
         </nav>
@@ -71,6 +75,27 @@
           <section class="view hidden" id="view-missoes" data-view-panel="missoes"></section>
           <section class="view hidden" id="view-eventos" data-view-panel="eventos"></section>
           <section class="view hidden" id="view-monstros" data-view-panel="monstros"></section>
+          <section class="view hidden" id="view-foruns" data-view-panel="foruns">
+            <div class="coming-page">
+              <div class="coming-hero"><span class="coming-orbit coming-orbit-one"></span><span class="coming-orbit coming-orbit-two"></span><div class="coming-hero-copy"><span class="coming-kicker">PORTAL DA COMUNIDADE</span><span class="coming-status"><i></i>Ainda está em desenvolvimento</span><h1>Fórum da Forja</h1><p>Ideias ganham força quando são compartilhadas. Estamos preparando um espaço para conversar sobre campanhas, trocar inspiração e encontrar sua próxima mesa.</p></div><span class="coming-hero-icon" data-icon="users"></span></div>
+              <div class="coming-section-head"><div><span class="coming-kicker">O QUE ESTAMOS PREPARANDO</span><h2>Uma comunidade para suas histórias</h2></div><span class="coming-hint">Novidades em breve</span></div>
+              <div class="coming-feature-grid"><article class="coming-feature"><span class="coming-feature-icon" data-icon="book"></span><h3>Conversas por tema</h3><p>Canais para RPG, construção de mundo, sistemas e narrativas.</p><span>PLANEJADO</span></article><article class="coming-feature"><span class="coming-feature-icon" data-icon="users"></span><h3>Encontre uma mesa</h3><p>Conheça jogadores e mestres que combinam com seu estilo.</p><span>PLANEJADO</span></article><article class="coming-feature"><span class="coming-feature-icon" data-icon="spark"></span><h3>Compartilhe ideias</h3><p>Peça sugestões e mostre os detalhes que tornam seu mundo único.</p><span>PLANEJADO</span></article></div>
+            </div>
+          </section>
+          <section class="view hidden" id="view-vitrine" data-view-panel="vitrine">
+            <div class="coming-page">
+              <div class="coming-hero"><span class="coming-orbit coming-orbit-one"></span><span class="coming-orbit coming-orbit-two"></span><div class="coming-hero-copy"><span class="coming-kicker">MUNDOS DA COMUNIDADE</span><span class="coming-status"><i></i>Ainda está em desenvolvimento</span><h1>Vitrine de Mundos</h1><p>Um salão para explorar universos, descobrir novas ideias e compartilhar suas criações com outros exploradores.</p></div><span class="coming-hero-icon" data-icon="globe"></span></div>
+              <div class="coming-section-head"><div><span class="coming-kicker">UM UNIVERSO DE POSSIBILIDADES</span><h2>Descubra o que outros criadores estão fazendo</h2></div><span class="coming-hint">Novidades em breve</span></div>
+              <div class="coming-feature-grid"><article class="coming-feature"><span class="coming-feature-icon" data-icon="globe"></span><h3>Explore universos</h3><p>Encontre cenários, mapas e conceitos para inspirar sua próxima aventura.</p><span>PLANEJADO</span></article><article class="coming-feature"><span class="coming-feature-icon" data-icon="spark"></span><h3>Destaques da comunidade</h3><p>Uma seleção de mundos originais feitos por jogadores e mestres.</p><span>PLANEJADO</span></article><article class="coming-feature"><span class="coming-feature-icon" data-icon="download"></span><h3>Compartilhe com cuidado</h3><p>Controles para decidir o que mostrar e como distribuir suas criações.</p><span>PLANEJADO</span></article></div>
+            </div>
+          </section>
+          <section class="view hidden" id="view-guilda" data-view-panel="guilda">
+            <div class="coming-page">
+              <div class="coming-hero"><span class="coming-orbit coming-orbit-one"></span><span class="coming-orbit coming-orbit-two"></span><div class="coming-hero-copy"><span class="coming-kicker">JORNADA EM EQUIPE</span><span class="coming-status"><i></i>Ainda está em desenvolvimento</span><h1>Guilda de Criadores</h1><p>Planeje campanhas em conjunto, reúna colaboradores e construa histórias maiores, mantendo cada projeto organizado.</p></div><span class="coming-hero-icon" data-icon="spark"></span></div>
+              <div class="coming-section-head"><div><span class="coming-kicker">CRIAR TAMBÉM É COLABORAR</span><h2>Ferramentas para tirar projetos do papel</h2></div><span class="coming-hint">Novidades em breve</span></div>
+              <div class="coming-feature-grid"><article class="coming-feature"><span class="coming-feature-icon" data-icon="users"></span><h3>Equipes e convites</h3><p>Reúna mestres, escritores e artistas em torno de uma campanha.</p><span>PLANEJADO</span></article><article class="coming-feature"><span class="coming-feature-icon" data-icon="scroll"></span><h3>Projetos compartilhados</h3><p>Organize notas, referências e objetivos do grupo em um só lugar.</p><span>PLANEJADO</span></article><article class="coming-feature"><span class="coming-feature-icon" data-icon="clock"></span><h3>Criação no seu ritmo</h3><p>Acompanhe ideias e próximos passos sem perder o fio da história.</p><span>PLANEJADO</span></article></div>
+            </div>
+          </section>
           <section class="view hidden" id="view-configuracoes" data-view-panel="configuracoes"></section>
           <footer class="app-footer"><span>WorldForge RPG <span id="app-version">· 1.0</span></span><span>Seu próximo mundo começa com uma ideia.</span><span class="footer-legal-links"><button type="button" data-view="configuracoes" data-open-settings="privacy">Privacidade</button><button type="button" data-view="configuracoes" data-open-settings="terms">Termos de uso</button></span></footer>
         </div>
@@ -161,6 +186,6 @@
     <input id="import-file" type="file" accept=".json,application/json" hidden>
     <input id="library-import-file" type="file" accept=".json,application/json" hidden>
     <div class="toast-region" id="toast-region" aria-live="polite"></div>
-    <script src="./app.js?v=16" defer></script>
+    <script src="./app.js?v=17" defer></script>
   </body>
 </html>
